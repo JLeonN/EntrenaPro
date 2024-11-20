@@ -1,9 +1,10 @@
 import "./App.css";
+import Estructura from "./Componentes/Estructura";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hola mundo</h1>
+      <Estructura />
     </div>
   );
 }
