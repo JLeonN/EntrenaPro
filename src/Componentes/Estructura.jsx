@@ -9,7 +9,7 @@ const Estructura = () => {
           {/* NavBar */}
 
           {/* Inicio */}
-          <Route path="/" element={<Inicio />} />
+          <Route path="/EntrenaPro" element={<Inicio />} />
 
           {/* Errores */}
           {/* <Route path="/*" element={<Error404 />} /> */}
