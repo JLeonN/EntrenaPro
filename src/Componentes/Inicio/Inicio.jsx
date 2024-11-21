@@ -5,7 +5,7 @@ function Inicio() {
     <div className="contenedorPrincipal">
       <div className="encabezado">
         <img
-          src="./EntrenaPro/Imagenes/Iconos/Estrella.jpg" // Cambiar por ícono que va
+          src="./Imagenes/Iconos/Estrella.jpg" // Cambiar por ícono que va
           alt="Logo"
           className="iconoLogo"
         />
