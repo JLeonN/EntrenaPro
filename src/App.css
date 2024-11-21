@@ -18,18 +18,21 @@
   --tipografiaGeneral: "Kanit", Arial, sans-serif;
   /* Colores */
   --FondoBody: #000; /* Negro */
-  --FondoNav: #1f1f1f; /* Gris oscuro para el nav */
-  --TituloH1: #264653; /* Azul petróleo */
+  --FondoNav: #1f1f1f; /* Gris oscuro */
+  --TituloH1: #4caf50; /* Verde brillante */
   --Texto: #f5f5f5; /* Blanco */
-  --TextoLink: #2ecc71; /* Verde Esmeralda */
-  --ColorOpcion1: #2a9d8f; /* Verde Azulado */
-  --ColorOpcion2: #708090; /* Gris más oscuro */
-  --ColorOpcion3: #d1c4e9; /* Lavanda */
-  --ColorOpcion4: #ffeb3b; /* Amarillo brillante */
+  --TextoLink: #2a9d8f; /* Verde azulado */
+  --ColorOpcion1: #264653; /* Azul petróleo */
+  --ColorOpcion2: #e63946; /* Rojo coral */
+  --ColorOpcion3: #f4a261; /* Naranja cálido */
+  --ColorOpcion4: #2ecc71; /* Verde esmeralda */
   --Boton: #00cc99; /* Verde claro */
   --BotonHover: #009973; /* Verde más oscuro */
-  --Hover: #e63946; /* Rojo Coral */
+  --BotonActive: #006644; /* Verde oscuro para clics */
+  --Hover: #e63946; /* Rojo coral */
 }
+
+
 
 body {
   background-color: var(--FondoBody);
@@ -67,6 +70,10 @@ body {
   font-size: 16px;
   outline: none;
   padding: 10px 0;
+  color: var(--Texto);
+}
+.campo:focus-within {
+  border-bottom: 1px solid var(--Hover); /* Cambia la línea al color que prefieras */
 }
 
 /* Estilos de los botones */
@@ -90,6 +97,9 @@ body {
 .boton:hover {
   background-color: var(--BotonHover);
 }
+.boton:active {
+  background-color: #006644; /* Verde aún más oscuro para el clic */
+}
 /* ------------------------------------------------------------------------- */
 
 /* Estilos inicio */
@@ -106,7 +116,3 @@ body {
   margin-bottom: 30px;
 }
 /* ------------------------------------------------------------------------- */
-
-
-
-/* "homepage": "http://JLeonN.github.io/EntrenaPro", */
