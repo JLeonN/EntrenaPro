@@ -17,7 +17,7 @@
   --tipografiaNombre: "Protest Guerrilla", Arial, sans-serif;
   --tipografiaGeneral: "Kanit", Arial, sans-serif;
   /* Colores */
-  --FondoBody: #333333bf; /* Negro semi-transparente */
+  --FondoBody: #000; /* Negro */
   --FondoNav: #1f1f1f; /* Gris oscuro para el nav */
   --TituloH1: #264653; /* Azul petróleo */
   --Texto: #f5f5f5; /* Blanco */
@@ -26,9 +26,87 @@
   --ColorOpcion2: #708090; /* Gris más oscuro */
   --ColorOpcion3: #d1c4e9; /* Lavanda */
   --ColorOpcion4: #ffeb3b; /* Amarillo brillante */
+  --Boton: #00cc99; /* Verde claro */
+  --BotonHover: #009973; /* Verde más oscuro */
   --Hover: #e63946; /* Rojo Coral */
 }
 
 body {
   background-color: var(--FondoBody);
+  color: var(--Texto);
 }
+/* ------------------------------------------------------------------------- */
+
+/* Estilos generales */
+.titulo {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.iconoLogo {
+  width: 80px;
+  height: 80px;
+}
+
+/* Estilos del formulario */
+.formulario {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+.campo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--Texto)
+}
+.inputCampo {
+  width: 100%;
+  border: none;
+  background: none;
+  font-size: 16px;
+  outline: none;
+  padding: 10px 0;
+}
+
+/* Estilos de los botones */
+.botones {
+  width: 100%;
+  max-width: 300px;
+}
+.boton {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--Texto);
+  background-color: var(--Boton);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.boton:hover {
+  background-color: var(--BotonHover);
+}
+/* ------------------------------------------------------------------------- */
+
+/* Estilos inicio */
+.contenedorPrincipal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+.encabezado {
+  text-align: center;
+  margin-bottom: 30px;
+}
+/* ------------------------------------------------------------------------- */
+
+
+
+/* "homepage": "http://JLeonN.github.io/EntrenaPro", */
