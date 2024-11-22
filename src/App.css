@@ -71,8 +71,8 @@ body {
   color: var(--Texto);
   border-bottom: 1px solid var(--Texto);
 }
-.campo:focus-within {
-  border-bottom: 1px solid var(--Hover); /* Cambia la línea al color que prefieras */
+.inputCampo:focus-within {
+  border-bottom: 1px solid var(--Hover);
 }
 
 /* Estilos de los botones */
