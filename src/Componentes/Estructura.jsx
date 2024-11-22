@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Inicio from "./Inicio/Inicio";
+import ListaRutinas from "./Rutinas/ListaRutinas";
 
 const Estructura = () => {
   return (
@@ -10,6 +11,9 @@ const Estructura = () => {
 
           {/* Inicio */}
           <Route path="/EntrenaPro" element={<Inicio />} />
+
+          {/* Rutinas */}
+          <Route path="/ListaDeRutinas" element={<ListaRutinas />} />
 
           {/* Errores */}
           {/* <Route path="/*" element={<Error404 />} /> */}

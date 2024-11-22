@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Inicio() {
   return (
@@ -13,11 +14,7 @@ function Inicio() {
       </div>
       <form className="formulario">
         <div className="campo">
-          <input
-            type="text"
-            placeholder="Usuario"
-            className="inputCampo"
-          />
+          <input type="text" placeholder="Usuario" className="inputCampo" />
         </div>
         <div className="campo">
           <input
@@ -30,7 +27,9 @@ function Inicio() {
       <div className="botones">
         <button className="boton">INICIAR</button>
         <button className="boton">REGISTRARSE</button>
-        <button className="boton">CONTINUAR</button>
+        <Link to="/ListaDeRutinas">
+          <button className="boton">CONTINUAR</button>
+        </Link>
       </div>
     </div>
   );
