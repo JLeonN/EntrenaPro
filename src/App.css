@@ -10,6 +10,7 @@
   font-size: 100%;
   width: 100%;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 /* Variables CSS */
@@ -31,8 +32,6 @@
   --BotonActive: #006644; /* Verde oscuro para clics */
   --Hover: #e63946; /* Rojo coral */
 }
-
-
 
 body {
   background-color: var(--FondoBody);
@@ -61,7 +60,6 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  border-bottom: 1px solid var(--Texto)
 }
 .inputCampo {
   width: 100%;
@@ -71,6 +69,7 @@ body {
   outline: none;
   padding: 10px 0;
   color: var(--Texto);
+  border-bottom: 1px solid var(--Texto);
 }
 .campo:focus-within {
   border-bottom: 1px solid var(--Hover); /* Cambia la línea al color que prefieras */
@@ -98,19 +97,20 @@ body {
   background-color: var(--BotonHover);
 }
 .boton:active {
-  background-color: #006644; /* Verde aún más oscuro para el clic */
+  background-color: var(--BotonActive);
 }
 /* ------------------------------------------------------------------------- */
 
 /* Estilos inicio */
 .contenedorPrincipal {
+  height: calc(100vh - 40px); /* 40px es el total del padding vertical */
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  padding: 20px;
 }
+
 .encabezado {
   text-align: center;
   margin-bottom: 30px;
