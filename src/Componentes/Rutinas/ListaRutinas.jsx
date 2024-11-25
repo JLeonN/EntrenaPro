@@ -13,12 +13,7 @@ function Inicio() {
         <h3 className="subTitulo">Rutinas</h3>
       </div>
       <div className="botones">
-        <button className="boton">Pecho y espalda</button>
-        <button className="boton">Brazos</button>
-        <button className="boton">Zona madia</button>
-        <button className="boton">Piernas</button>
-        <button className="boton">Dedo del pie</button>
-        <button className="boton">...</button>
+        <button className="boton">Crea tu rutina</button>
       </div>
     </div>
   );
