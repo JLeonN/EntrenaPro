@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Inicio() {
   return (
@@ -13,7 +14,9 @@ function Inicio() {
         <h3 className="subTitulo">Rutinas</h3>
       </div>
       <div className="botones">
-        <button className="boton">Crea tu rutina</button>
+        <Link to="/RutinasModal">
+          <button className="boton">Crea tu rutina</button>
+        </Link>
       </div>
     </div>
   );

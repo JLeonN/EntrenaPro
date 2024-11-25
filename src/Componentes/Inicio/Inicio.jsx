@@ -30,9 +30,6 @@ function Inicio() {
         <Link to="/ListaDeRutinas">
           <button className="boton">CONTINUAR</button>
         </Link>
-        <Link to="/RutinasModal">
-          <button className="boton">De momento</button>
-        </Link>
       </div>
     </div>
   );
