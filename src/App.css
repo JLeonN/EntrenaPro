@@ -31,6 +31,8 @@
   --BotonHover: #009973; /* Verde más oscuro */
   --BotonActive: #006644; /* Verde oscuro para clics */
   --Hover: #e63946; /* Rojo coral */
+  --Transparencia: #000000cc; /* Fondo negro con transparencia */
+  --SombraLigera: 0 4px 15px #00000080; /* Agrega una sombra ligera para que el modal resalte. */
 }
 
 body {
@@ -140,5 +142,24 @@ body {
   text-align: center;
   max-width: 297px;
 }
+.fondoModal {
+  position: fixed; /* Fijo en la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--Transparencia);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.contenedorPrincipal {
+  background-color: var(--FondoBody);
+  border-radius: 10px;
+  padding: 20px;
+  /* max-width: 400px; */
+  width: 100%;
+  box-shadow: var(--SombraLigera);
+}
 /* ------------------------------------------------------------------------- */
-
