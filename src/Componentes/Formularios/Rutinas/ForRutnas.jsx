@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 function ForRutnas() {
   return (
     <div className="fondoModal">
-      <div className="contenedorPrincipal">
+      <div className="contenedorModal">
         <div className="encabezadoDos">
           <h1 className="titulo">ENTRENA PRO</h1>
-          <h3 className="subTitulo">Rutinas</h3>
+          <h3 className="subTitulo">Rutina</h3>
         </div>
         <form className="formulario">
           <div className="campoRutina">

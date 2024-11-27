@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ForRutnas from "../Formularios/Rutinas/ForRutnas";
 
-function Inicio() {
+function ListaRutinas() {
   return (
     <>
       <div className="contenedorPrincipal">
@@ -26,4 +26,4 @@ function Inicio() {
   );
 }
 
-export default Inicio;
+export default ListaRutinas;
