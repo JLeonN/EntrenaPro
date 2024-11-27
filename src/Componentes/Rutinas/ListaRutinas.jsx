@@ -1,27 +1,49 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import Modal from "react-modal";
 import ForRutnas from "../Formularios/Rutinas/ForRutnas";
 
+// Configuración de React Modal
+Modal.setAppElement("#root");
+
 function ListaRutinas() {
+  
+  const [modalAbierto, setModalAbierto] = useState(false);
+
+  const abrirModal = () => setModalAbierto(true);
+  const cerrarModal = () => setModalAbierto(false);
+
   return (
     <>
       <div className="contenedorPrincipal">
+        {/* Encabezado */}
         <div className="encabezadoDos">
           <img
-            src="./EntrenaPro/Imagenes/Iconos/Estrella.jpg" // Cambiar por ícono que va
+            src="./EntrenaPro/Imagenes/Iconos/Estrella.jpg"
             alt="Logo"
             className="iconoLogo"
           />
           <h1 className="titulo">ENTRENA PRO</h1>
           <h3 className="subTitulo">Rutinas</h3>
         </div>
+
+        {/* Botón */}
         <div className="botones">
-          {/* <Link to="/RutinasModal"> */}
-          <button className="boton">Crea tu rutina</button>
-          {/* </Link> */}
+          <button className="boton" onClick={abrirModal}>
+            Crea tu rutina
+          </button>
         </div>
       </div>
-      <ForRutnas />
+
+      {/* Modal que contiene el formulario */}
+      <Modal
+        isOpen={modalAbierto}
+        onRequestClose={cerrarModal}
+        contentLabel="Formulario para crear rutina"
+        className="fondoModal"
+      >
+        {/* Formulario dentro del modal */}
+        <ForRutnas cerrarModal={cerrarModal} />
+      </Modal>
     </>
   );
 }
