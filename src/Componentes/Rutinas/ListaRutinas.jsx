@@ -6,7 +6,6 @@ import ForRutnas from "../Formularios/Rutinas/ForRutnas";
 Modal.setAppElement("#root");
 
 function ListaRutinas() {
-  
   const [modalAbierto, setModalAbierto] = useState(false);
 
   const abrirModal = () => setModalAbierto(true);

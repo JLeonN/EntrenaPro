@@ -39,11 +39,7 @@ function ForRutnas({ cerrarModal }) {
           <button type="submit" className="boton">
             Guardar
           </button>
-          <button
-            type="button"
-            className="boton"
-            onClick={cerrarModal}
-          >
+          <button type="button" className="boton" onClick={cerrarModal}>
             Cancelar
           </button>
         </div>
