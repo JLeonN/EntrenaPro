@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Inicio from "./Inicio/Inicio";
 import ListaRutinas from "./Rutinas/ListaRutinas";
-import ForRutnas from "./Formularios/Rutinas/ForRutnas";
+import ForRutnas from "./Formularios/Rutina/ForRutnas";
 
 const Estructura = () => {
   return (

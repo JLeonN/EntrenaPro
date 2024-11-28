@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-import ForRutnas from "../Formularios/Rutinas/ForRutnas";
+import ForRutnas from "../Formularios/Rutina/ForRutnas";
 
 // Configuración de React Modal
 Modal.setAppElement("#root");
