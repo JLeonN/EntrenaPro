@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Inicio from "./Inicio/Inicio";
-import ListaRutinas from "./Rutinas/ListaRutinas";
+import Rutinas from "./Rutinas/Rutinas";
 import ForRutnas from "./Formularios/Rutina/ForRutnas";
 
 const Estructura = () => {
@@ -14,7 +14,7 @@ const Estructura = () => {
           <Route path="/EntrenaPro" element={<Inicio />} />
 
           {/* Rutinas */}
-          <Route path="/ListaDeRutinas" element={<ListaRutinas />} />
+          <Route path="/ListaDeRutinas" element={<Rutinas />} />
           <Route path="/RutinasModal" element={<ForRutnas />} />
 
           {/* Errores */}

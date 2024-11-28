@@ -5,7 +5,7 @@ import ForRutnas from "../Formularios/Rutina/ForRutnas";
 // Configuración de React Modal
 Modal.setAppElement("#root");
 
-function ListaRutinas() {
+function Rutinas() {
   const [modalAbierto, setModalAbierto] = useState(false);
 
   const abrirModal = () => setModalAbierto(true);
@@ -47,4 +47,4 @@ function ListaRutinas() {
   );
 }
 
-export default ListaRutinas;
+export default Rutinas;
