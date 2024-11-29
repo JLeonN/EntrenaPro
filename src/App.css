@@ -76,7 +76,7 @@ body {
 .inputCampo:focus-within {
   border-bottom: 1px solid var(--Hover);
 }
-/* Formulario de rutinas modal */
+/* Formulario de rutina modal */
 .labelRutina {
   font-size: 14px;
   font-weight: bold;
@@ -119,6 +119,17 @@ body {
   padding-bottom: 12px;
   color: var(--ColorOpcion4);
 }
+
+/* Estilos para los componentes en general */
+.estiloComponente {
+  text-align: center;
+  max-width: 300px;
+}
+.ContenedorSecundario {
+  text-align: center;
+  max-width: 300px;
+  max-height: 50vh;
+}
 /* ------------------------------------------------------------------------- */
 
 /* Estilos inicio */
@@ -128,7 +139,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .encabezado {
@@ -137,10 +147,31 @@ body {
 }
 /* ------------------------------------------------------------------------- */
 
-/* Lista de rutinas */
+/* Lista de rutina */
 .encabezadoDos {
   text-align: center;
   max-width: 297px;
+}
+/* Boton de FA */
+.botonFlotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: var(--Texto);
+  background-color: var(--Boton);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px var(--SombraLigera);
+}
+.botonFlotante:hover {
+  background-color: var(--BotonHover);
+}
+.botonFlotante:active {
+  background-color: var(--BotonActive);
 }
 /* ------------------------------------------------------------------------- */
 
@@ -169,4 +200,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+/* ------------------------------------------------------------------------- */
+
+/* Lista de las rutinas creadas  */
 /* ------------------------------------------------------------------------- */

@@ -6,7 +6,7 @@ import ForRutnas from "./Formularios/Rutina/ForRutnas";
 const Estructura = () => {
   return (
     <>
-      <div className="campo">
+      <div>
         <Routes>
           {/* NavBar */}
 

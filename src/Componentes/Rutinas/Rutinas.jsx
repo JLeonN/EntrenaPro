@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import ForRutnas from "../Formularios/Rutina/ForRutnas";
+import ListaDeRutinas from "./ListaDeRutinas";
 
 // Configuración de React Modal
 Modal.setAppElement("#root");
@@ -27,9 +28,14 @@ function Rutinas() {
 
         {/* Botón */}
         <div className="botones">
-          <button className="boton" onClick={abrirModal}>
-            Crea tu rutina
+          <button className="botonFlotante" onClick={abrirModal}>
+            +
           </button>
+        </div>
+
+        {/* Lista de las rutinas creadas */}
+        <div className="estiloComponente">
+          <ListaDeRutinas />
         </div>
       </div>
 
