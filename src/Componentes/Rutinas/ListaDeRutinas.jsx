@@ -1,12 +1,14 @@
-function ListaDeRutinas() {
+function ListaDeRutinas({ rutinas }) {
   return (
-    <>
-      <div className="ContenedorSecundario">
-        <div className="botones">
-          <button className="boton">Pecho y Espalda</button>
-        </div>
+    <div className="ContenedorSecundario">
+      <div className="botones">
+        {rutinas.map((rutina, indice) => (
+          <button key={indice} className="boton">
+            {rutina.nombre}
+          </button>
+        ))}
       </div>
-    </>
+    </div>
   );
 }
 

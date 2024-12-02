@@ -7,15 +7,21 @@ import ListaDeRutinas from "./ListaDeRutinas";
 Modal.setAppElement("#root");
 
 function Rutinas() {
+  // Estado para manejar si el modal está abierto o cerrado
   const [modalAbierto, setModalAbierto] = useState(false);
-
+  // Estado para manejar la lista de rutinas creadas
+  const [listaDeRutinas, setListaDeRutinas] = useState([]);
+  // Función para abrir el modal
   const abrirModal = () => setModalAbierto(true);
   const cerrarModal = () => setModalAbierto(false);
+  // Función para agregar una nueva rutina a la lista
+  const agregarRutina = (nuevaRutina) => {
+    setListaDeRutinas([...listaDeRutinas, nuevaRutina]); // Agrega la nueva rutina al estado
+  };
 
   return (
     <>
       <div className="contenedorPrincipal">
-        {/* Encabezado */}
         <div className="encabezadoDos">
           <img
             src="./EntrenaPro/Imagenes/Iconos/Estrella.jpg"
@@ -35,7 +41,7 @@ function Rutinas() {
 
         {/* Lista de las rutinas creadas */}
         <div className="estiloComponente">
-          <ListaDeRutinas />
+          <ListaDeRutinas rutinas={listaDeRutinas} />
         </div>
       </div>
 
@@ -46,8 +52,8 @@ function Rutinas() {
         contentLabel="Formulario para crear rutina"
         className="fondoModal"
       >
-        {/* Formulario dentro del modal */}
-        <ForRutnas cerrarModal={cerrarModal} />
+        {/* Formulario para agregar una nueva rutina */}
+        <ForRutnas cerrarModal={cerrarModal} agregarRutina={agregarRutina} />
       </Modal>
     </>
   );

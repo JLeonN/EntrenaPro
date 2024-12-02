@@ -1,14 +1,40 @@
-function ForRutnas({ cerrarModal }) {
+import React, { useState } from "react";
+
+function ForRutnas({ cerrarModal, agregarRutina }) {
+  // Estados para manejar formulario
+  const [nombreRutina, setNombreRutina] = useState("");
+  const [descripcion, setDescripcion] = useState("");
+
+  // Función para manejar formulario
+  const manejarEnvio = (evento) => {
+    evento.preventDefault(); // Previene la recarga de la página
+    if (nombreRutina.trim() === "") {
+      alert("El nombre de la rutina es obligatorio");
+      return;
+    }
+
+    // Crear el objeto de la nueva rutina
+    const nuevaRutina = {
+      nombre: nombreRutina,
+      descripcion: descripcion,
+    };
+
+    // Agregar la rutina a la lista
+    agregarRutina(nuevaRutina);
+
+    // Limpiar los campos del formulario y cerrar el modal
+    setNombreRutina("");
+    setDescripcion("");
+    cerrarModal();
+  };
+
   return (
     <div className="contenedorModal">
-      {/* Encabezado del formulario */}
       <div className="encabezadoDos">
         <h1 className="titulo">ENTRENA PRO</h1>
-        <h3 className="subTitulo">Rutina</h3>
+        <h3 className="subTitulo">Nueva Rutina</h3>
       </div>
-
-      {/* Formulario para crear una nueva rutina */}
-      <form className="formulario">
+      <form className="formulario" onSubmit={manejarEnvio}>
         <div className="campoRutina">
           <label htmlFor="nombreRutina" className="labelRutina">
             Nombre de la rutina
@@ -19,6 +45,8 @@ function ForRutnas({ cerrarModal }) {
             name="nombreRutina"
             placeholder="Ejemplo: Rutina de pecho"
             className="inputCampo"
+            value={nombreRutina}
+            onChange={(e) => setNombreRutina(e.target.value)}
           />
         </div>
 
@@ -31,10 +59,11 @@ function ForRutnas({ cerrarModal }) {
             name="descripcion"
             placeholder="Añade una breve descripción..."
             className="inputCampo"
+            value={descripcion}
+            onChange={(e) => setDescripcion(e.target.value)}
           ></textarea>
         </div>
 
-        {/* Botones del formulario */}
         <div className="botones">
           <button type="submit" className="boton">
             Guardar
