@@ -202,5 +202,35 @@ body {
 }
 /* ------------------------------------------------------------------------- */
 
-/* Lista de las rutinas creadas  */
+/* Error 404 */
+.error404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--FondoBody);
+  color: var(--Texto);
+  text-align: center;
+  padding: 20px;
+}
+.tituloError {
+  font-size: 8rem;
+  font-family: var(--tipografiaNombre);
+  color: var(--TituloH1);
+  margin-bottom: 20px;
+}
+.subTituloError {
+  font-size: 2rem;
+  font-family: var(--tipografiaGeneral);
+  color: var(--TextoLink);
+  margin-bottom: 10px;
+}
+.textoError {
+  font-size: 1.2rem;
+  font-family: var(--tipografiaGeneral);
+  color: var(--Texto);
+  margin-bottom: 30px;
+  max-width: 600px;
+}
 /* ------------------------------------------------------------------------- */

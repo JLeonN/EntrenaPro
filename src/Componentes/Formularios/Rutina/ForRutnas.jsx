@@ -65,7 +65,7 @@ function ForRutnas({ cerrarModal, agregarRutina }) {
         </div>
 
         <div className="botones">
-          <button type="submit" className="boton" onClick={cerrarModal}>
+          <button type="submit" className="boton">
             Guardar
           </button>
           <button type="button" className="boton" onClick={cerrarModal}>
