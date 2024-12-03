@@ -19,6 +19,7 @@ const Estructura = () => {
           <Route path="/RutinasModal" element={<ForRutnas />} />
 
           {/* Errores */}
+          <Route path="/EntrenaPro/*" element={<Error404 />} />
           <Route path="/*" element={<Error404 />} />
         </Routes>
       </div>
