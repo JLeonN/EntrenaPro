@@ -155,6 +155,8 @@ body {
 /* Boton de FAB */
 .botonFlotante {
   position: fixed;
+  display: flex;
+  align-items: center;
   bottom: 20px;
   right: 20px;
   color: var(--Texto);
