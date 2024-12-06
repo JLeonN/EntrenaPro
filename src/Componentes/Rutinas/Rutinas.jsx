@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import ForRutnas from "../Formularios/Rutina/ForRutnas";
 import ListaDeRutinas from "./ListaDeRutinas";
-import { FaPlus } from 'react-icons/fa';
-import Cronometro from "../Cronometro/Cronometro";
+import { FaPlus } from "react-icons/fa";
 
 // Configuración de React Modal
 Modal.setAppElement("#root");
@@ -57,7 +56,6 @@ function Rutinas() {
         {/* Formulario para agregar una nueva rutina */}
         <ForRutnas cerrarModal={cerrarModal} agregarRutina={agregarRutina} />
       </Modal>
-      {/* <Cronometro /> */}
     </>
   );
 }
