@@ -25,8 +25,12 @@ function Inicio() {
         </div>
       </form>
       <div className="botones">
-        <button className="boton">INICIAR</button>
-        <button className="boton">REGISTRARSE</button>
+        <Link to="/Cronometro">
+          <button className="boton">INICIAR</button>
+        </Link>
+        <Link to="/*">
+          <button className="boton">REGISTRARSE</button>
+        </Link>
         <Link to="/ListaDeRutinas">
           <button className="boton">CONTINUAR</button>
         </Link>
