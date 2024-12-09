@@ -257,4 +257,16 @@ body {
   padding: 20px;
   box-sizing: border-box;
 }
+.marcas {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  color: var(--Texto);
+}
+.marcas p {
+  margin: 5px 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
 /* ------------------------------------------------------------------------- */

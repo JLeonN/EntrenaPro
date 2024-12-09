@@ -4,6 +4,7 @@ function Cronometro() {
   // Estado para manejar el tiempo transcurrido
   const [tiempo, setTiempo] = useState(0);
   const [enMarcha, setEnMarcha] = useState(false);
+  const [marcas, setMarcas] = useState([]); // Lista de marcas registradas
 
   // Evita problemas al iniciar/pausar
   const intervaloRef = useRef(null);
@@ -20,11 +21,17 @@ function Cronometro() {
     setEnMarcha(!enMarcha); // Alterna el estado
   };
 
-  // Función para reiniciar el cronómetro
-  const reiniciarCronometro = () => {
-    clearInterval(intervaloRef.current); // Detiene el intervalo
-    setTiempo(0); // Reinicia el tiempo
-    setEnMarcha(false); // Asegura que no esté en marcha
+  // Función para marcar el tiempo actual
+  const manejarMarcarReiniciar = () => {
+    if (enMarcha) {
+      // Si el cronómetro está en marcha, registra una marca
+      setMarcas((prevMarcas) => [...prevMarcas, tiempo]);
+    } else {
+      // Si el cronómetro está en pausa, reinicia el cronómetro
+      clearInterval(intervaloRef.current); // Detiene el intervalo
+      setTiempo(0); // Reinicia el tiempo
+      setMarcas([]); // Limpia las marcas
+    }
   };
 
   // Formatear el tiempo en mm:ss:ms
@@ -41,7 +48,7 @@ function Cronometro() {
   return (
     <div className="contenedorCronometro">
       <div className="encabezadoDos">
-        <h1 className="titulo">Cronómetro</h1>
+        <h1 className="subTitulo">Cronómetro</h1>
       </div>
       <div className="pantallaTiempo">
         <h2>{formatearTiempo(tiempo)}</h2>
@@ -50,9 +57,19 @@ function Cronometro() {
         <button className="boton botonCronometro" onClick={manejarInicioPausa}>
           {enMarcha ? "Pausar" : "Iniciar"}
         </button>
-        <button className="boton botonCronometro" onClick={reiniciarCronometro}>
-          Reiniciar
+        <button
+          className="boton botonCronometro"
+          onClick={manejarMarcarReiniciar}
+        >
+          {enMarcha ? "Marcar" : "Reiniciar"}
         </button>
+      </div>
+      <div className="marcas">
+        {marcas.map((marca, index) => (
+          <p key={index}>
+            Marca {index + 1}: {formatearTiempo(marca)}
+          </p>
+        ))}
       </div>
     </div>
   );
