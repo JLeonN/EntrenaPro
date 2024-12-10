@@ -67,7 +67,8 @@ function Cronometro() {
       <div className="marcas">
         {marcas.map((marca, index) => (
           <p key={index}>
-            Marca {index + 1}: {formatearTiempo(marca)}
+            <span className="numeroRedondo">{index + 1}</span>
+            {formatearTiempo(marca)}
           </p>
         ))}
       </div>
