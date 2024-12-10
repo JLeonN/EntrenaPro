@@ -25,7 +25,7 @@ function Cronometro() {
   const manejarMarcarReiniciar = () => {
     if (enMarcha) {
       // Si el cronómetro está en marcha, registra una marca
-      setMarcas((prevMarcas) => [...prevMarcas, tiempo]);
+      setMarcas((prevMarcas) => [tiempo, ...prevMarcas]); // Añade la marca al principio
     } else {
       // Si el cronómetro está en pausa, reinicia el cronómetro
       clearInterval(intervaloRef.current); // Detiene el intervalo
@@ -67,7 +67,7 @@ function Cronometro() {
       <div className="marcas">
         {marcas.map((marca, index) => (
           <p key={index}>
-            <span className="numeroRedondo">{index + 1}</span>
+            <span className="numeroRedondo">{marcas.length - index}</span>{" "}
             {formatearTiempo(marca)}
           </p>
         ))}
