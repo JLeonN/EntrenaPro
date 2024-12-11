@@ -1,8 +1,7 @@
 import React, { useState, useRef } from "react";
-import { FaPlay } from 'react-icons/fa';
-import { FaPause } from 'react-icons/fa';
-import { FaStop } from 'react-icons/fa';
-import { FaCircle } from 'react-icons/fa';
+import { FaPlay } from "react-icons/fa";
+import { FaPause } from "react-icons/fa";
+import { FaStop } from "react-icons/fa";
 import { BiSolidFlag } from "react-icons/bi";
 
 function Cronometro() {
@@ -30,7 +29,12 @@ function Cronometro() {
   const manejarMarcarReiniciar = () => {
     if (enMarcha) {
       // Si el cronómetro está en marcha, registra una marca
-      setMarcas((prevMarcas) => [tiempo, ...prevMarcas]); // Añade la marca al principio
+      const nuevaMarca = {
+        tiempoActual: tiempo,
+        diferencia:
+          marcas.length > 0 ? tiempo - marcas[0].tiempoActual : tiempo,
+      };
+      setMarcas((prevMarcas) => [nuevaMarca, ...prevMarcas]); // Añade la marca al principio
     } else {
       // Si el cronómetro está en pausa, reinicia el cronómetro
       clearInterval(intervaloRef.current); // Detiene el intervalo
@@ -72,8 +76,14 @@ function Cronometro() {
       <div className="marcas">
         {marcas.map((marca, index) => (
           <p key={index}>
-            <span className="numeroRedondo">{marcas.length - index}</span>{" "}
-            {formatearTiempo(marca)}
+            <span className="numeroRedondo">{marcas.length - index}</span>
+            {formatearTiempo(marca.tiempoActual)}
+            {index > 0 && (
+              <span className="diferencia">
+                {" "}
+                {formatearTiempo(marca.diferencia)}
+              </span>
+            )}
           </p>
         ))}
       </div>
