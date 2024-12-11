@@ -1,4 +1,9 @@
 import React, { useState, useRef } from "react";
+import { FaPlay } from 'react-icons/fa';
+import { FaPause } from 'react-icons/fa';
+import { FaStop } from 'react-icons/fa';
+import { FaCircle } from 'react-icons/fa';
+import { BiSolidFlag } from "react-icons/bi";
 
 function Cronometro() {
   // Estado para manejar el tiempo transcurrido
@@ -55,13 +60,13 @@ function Cronometro() {
       </div>
       <div className="botones">
         <button className="boton botonCronometro" onClick={manejarInicioPausa}>
-          {enMarcha ? "Pausar" : "Iniciar"}
+          {enMarcha ? <FaPause /> : <FaPlay />}
         </button>
         <button
           className="boton botonCronometro"
           onClick={manejarMarcarReiniciar}
         >
-          {enMarcha ? "Marcar" : "Reiniciar"}
+          {enMarcha ? <BiSolidFlag /> : <FaStop />}
         </button>
       </div>
       <div className="marcas">
