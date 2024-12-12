@@ -34,7 +34,8 @@ function Cronometro() {
         diferencia:
           marcas.length > 0 ? tiempo - marcas[0].tiempoActual : tiempo,
       };
-      setMarcas((prevMarcas) => [nuevaMarca, ...prevMarcas]); // Añade la marca al principio
+
+      setMarcas((prevMarcas) => [nuevaMarca, ...prevMarcas]); // Inserta la nueva marca al principio
     } else {
       // Si el cronómetro está en pausa, reinicia el cronómetro
       clearInterval(intervaloRef.current); // Detiene el intervalo
@@ -78,12 +79,9 @@ function Cronometro() {
           <p key={index}>
             <span className="numeroRedondo">{marcas.length - index}</span>
             {formatearTiempo(marca.tiempoActual)}
-            {index > 0 && (
-              <span className="diferencia">
-                {" "}
-                {formatearTiempo(marca.diferencia)}
-              </span>
-            )}
+            <span className="diferencia">
+              {formatearTiempo(marca.diferencia)}
+            </span>
           </p>
         ))}
       </div>
