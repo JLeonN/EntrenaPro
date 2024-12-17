@@ -110,8 +110,39 @@ body {
 .boton:active {
   background-color: var(--BotonActive);
 }
+/* Clase para los botones de Link */
+.linkBoton {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--Texto);
+  background-color: var(--Boton);
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.linkBoton:hover {
+  background-color: var(--BotonHover);
+}
+.linkBoton:active {
+  background-color: var(--BotonActive);
+}
 
-/* Estilos del H3 */
+/* Titulo H2 */
+.tituloH2 {
+  margin-top: 10px;
+  font-size: 19px;
+  font-weight: bold;
+  color: var(--ColorOpcion2);
+}
+/* Titulo H3 */
 .subTitulo {
   text-transform: uppercase;
   text-align: left;
@@ -297,5 +328,22 @@ body {
   color: var(--TextoLink);
   margin-left: 10px;
   text-align: right;
+}
+/* ------------------------------------------------------------------------- */
+
+/* Lista de rutinas */
+.contenedorDetalles {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.informacionRutina {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 /* ------------------------------------------------------------------------- */

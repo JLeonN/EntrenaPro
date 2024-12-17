@@ -4,6 +4,7 @@ import Rutinas from "./Rutinas/Rutinas";
 import ForRutnas from "./Formularios/Rutina/ForRutnas";
 import Error404 from "./Errores/Error404";
 import Cronometro from "./Cronometro/Cronometro";
+import DetallesRutina from "./Rutinas/DetallesRutina";
 
 const Estructura = () => {
   return (
@@ -22,6 +23,7 @@ const Estructura = () => {
           {/* Rutinas */}
           <Route path="/ListaDeRutinas" element={<Rutinas />} />
           <Route path="/RutinasModal" element={<ForRutnas />} />
+          <Route path="/rutina/:nombreRutina" element={<DetallesRutina />} />
 
           {/* Errores */}
           <Route path="/EntrenaPro/*" element={<Error404 />} />

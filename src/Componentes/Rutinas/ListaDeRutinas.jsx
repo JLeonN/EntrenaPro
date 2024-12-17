@@ -1,11 +1,19 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 function ListaDeRutinas({ rutinas }) {
   return (
     <div className="ContenedorSecundario">
       <div className="botones">
-        {rutinas.map((rutina, indice) => (
-          <button key={indice} className="boton">
+        {rutinas.map((rutina, index) => (
+          <Link
+            to={`/rutina/${rutina.nombre}`}
+            key={index}
+            className="linkBoton"
+            state={{ descripcion: rutina.descripcion }}
+          >
             {rutina.nombre}
-          </button>
+          </Link>
         ))}
       </div>
     </div>
